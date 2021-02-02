@@ -1,0 +1,44 @@
+minimum_cumulusci_version: '3.23.0'
+project:
+    name: SAL-Implementation-Template
+    package:
+        name: SAL Implementation Template
+        namespace: sfal
+        api_version: '50.0'
+    dependencies:
+        - github: 'https://github.com/SalesforceFoundation/SAL-CumulusCI'
+    git:
+        default_branch: 'main'
+    source_format: sfdx
+
+sources:
+    sfal:
+        github: 'https://github.com/SalesforceFoundation/SAL-CumulusCI'
+
+tasks:
+    robot:
+        options:
+            suites: robot/SAL-Implementation-Template/tests
+            options:
+                outputdir: robot/SAL-Implementation-Template/results
+
+    robot_testdoc:
+        options:
+            path: robot/SAL-Implementation-Template/tests
+            output: robot/SAL-Implementation-Template/doc/SAL-Implementation-Template_tests.html
+
+    run_tests:
+        options:
+            required_org_code_coverage_percent: 75
+
+flows:
+    dependencies:
+        steps:
+            3:
+                flow: sfal:customer_org
+            4:
+                flow: sfal:hed_config
+            5:
+                flow: sfal:hed_portal_setup_blob
+            6:
+                flow: sfal:hed_data
