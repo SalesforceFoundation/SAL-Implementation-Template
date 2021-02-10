@@ -1,7 +1,8 @@
-# SAL-Implementation-Template
+# SAL Implementation Template
 
-Add a brief description of this project here, in Markdown format.
-It will be shown on the main page of the project's GitHub repository.
+This repository is a template for partners and customers wanting to build out an implementation for SAL using the SAL Express Setup autoamtion from the [SAL-CumulusCI repository](https://github.com/SalesforceFoundation/SAL-CumulusCI).
+
+To use this template, click the [Use this template](https://github.com/SalesforceFoundation/SAL-Implementation-Template/generate) button to create your own repository from this template.
 
 ## Development
 
